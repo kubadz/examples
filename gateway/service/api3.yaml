@@ -4,10 +4,9 @@ kind: Api
 metadata:
   labels:
     example: http-db-service
-  name: http-db-service
+  name: http-db-service-3
 spec:
-  authenticationEnabled: true
-  hostname: http-db-service-7.kyma.local
+  hostname: http-db-service
   service:
     name: http-db-service
     port: 8017

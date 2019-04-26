@@ -10,5 +10,5 @@ spec:
   authenticationEnabled: true
   hostname: hello.kyma.local
   service:
-    name: hello
+    name: yellow
     port: 8080

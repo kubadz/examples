@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: http-db-service
+spec:
+  gateways:
+  - kyma-gateway.kyma-system.svc.cluster.local
+  hosts:
+  - http-db-service.kyma.local
+  http:
+  - match:
+    - uri:
+        regex: /.*
+    route:
+    - destination:
+        host: http-db-service.default.svc.cluster.local
+        port:
+          number: 8017

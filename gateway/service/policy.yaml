@@ -1,0 +1,12 @@
+apiVersion: authentication.istio.io/v1alpha1
+kind: Policy
+metadata:
+  name: http-db-service
+spec:
+  origins:
+  - jwt:
+      issuer: https://dex.kyma.local
+      jwksUri: http://dex-service.kyma-system.svc.cluster.local:5556/keys
+  principalBinding: USE_ORIGIN
+  targets:
+  - name: http-db-service

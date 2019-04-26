@@ -6,8 +6,8 @@ metadata:
     example: http-db-service
   name: http-db-service
 spec:
-  authenticationEnabled: true
-  hostname: http-db-service-7.kyma.local
+  authentication: []
+  hostname: http-db-service
   service:
     name: http-db-service
     port: 8017

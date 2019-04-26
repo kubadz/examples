@@ -8,6 +8,7 @@ metadata:
   name: hello
 spec:
   authenticationEnabled: true
+  authentication: []
   hostname: hello.kyma.local
   service:
     name: hello
